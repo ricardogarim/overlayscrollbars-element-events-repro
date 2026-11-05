@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OverlayScrollbars elementEvents listener repro</title>
+  </head>
+  <body>
+    <p>
+      Each move puts the last row first with <code>insertBefore</code>, as a list sorted by
+      activity does. The log shows the live <code>load</code> listeners on the image of row a.
+    </p>
+    <button id="move" type="button">Move a row</button>
+    <div id="host" style="height: 120px; width: 300px; border: 1px solid #ccc">
+      <div class="row"><img id="img-a" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" /> row a</div>
+      <div class="row"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" /> row b</div>
+    </div>
+    <pre id="log"></pre>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
